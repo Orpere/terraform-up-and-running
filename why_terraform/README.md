@@ -58,3 +58,5 @@ Why Terraform?
 
     - Happiness -
       Managing infrastructure manual is tedious and IAC permits the Computer do what his main task which is automate and the Developer coding, reliving the high level of stress from Ops back.
+
+- How Terraform works
