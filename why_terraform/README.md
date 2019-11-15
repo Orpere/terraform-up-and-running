@@ -78,6 +78,10 @@ Why Terraform?
         Master needs extra infrastructure, high maintenance, more points where you can have security issues as is more infrastructure to maintain.
 
     - Agent versus agentless
+        services with agents need Bootstrapping, more maintenance and need more one service running it will be more open to attackers.
+
     - Large community versus small community
+        Large community provide us kpi's for how many people are contributing to the development of the tool, how many people use the tool and the improves it need and how fast issues are sorted, this indicators gave us a good perspective if the tool will have a long life or die soon.
+
     - Mature versus cutting-edge
     - Using multiple tools together
