@@ -4,7 +4,7 @@ Why Terraform?
 
 - [x] [What is Devops?
 - [X] What is infrastructure as code?
-- [ ] The benefits of infrastructure as code
+- [x] The benefits of infrastructure as code
 - [ ] How Terraform works
 - [ ] How Terraform compares to other infrastructure as code tools”
 
@@ -37,10 +37,24 @@ Why Terraform?
 
 - The benefits of infrastructure as code
   - When your infrastructure are defined as code you are able to use a variety of software engineering practices to dramatically improve your software delivery process, including the following:
-    - Self-service
-    - Speed and safety
-    - Documentation
-    - VersionControl
-    - Validation
-    - Reuse
-    - Happiness
+
+    - Self-service -
+      If your Infrastructure is defined as IAC is not dependent of just one sysadmin to be deployed and the process can be full automated so the developers can even do them own deployment whenever needed.
+
+    - Speed and safety -
+      If a deployment is automated, it will be faster, safer and more reliable and not subject of manual errors.
+
+    - Documentation -
+      Instead have all the knowledge in a single head, IAC act as documentation as all state of the infrastructure will be register on source code what will make more easy of anyone take over the owner on case of absence.
+
+    - VersionControl -
+      You can store your entire IAC in the same version control, what it means is you have history log of your infrastructure done at each commit. This will give you the possibility to track much faster any issue and rol back to a previous version if needed.
+
+    - Validation -
+      As your infrastructure is defined as code you can perform a code review at any change running automatic tests and pass the code trough static analysis tools. This reduce the chance of defects.
+
+    - Reuse -
+      You can package your infrastructure into reusable modules instead using one monolithic and complex configuration you can distribute the code in small reusable parcels.
+
+    - Happiness -
+      Managing infrastructure manual is tedious and IAC permits the Computer do what his main task which is automate and the Developer coding, reliving the high level of stress from Ops back.
