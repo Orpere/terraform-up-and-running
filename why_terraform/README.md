@@ -5,7 +5,7 @@ Why Terraform?
 - [x] [What is Devops?
 - [X] What is infrastructure as code?
 - [x] The benefits of infrastructure as code
-- [ ] How Terraform works
+- [x] How Terraform works
 - [ ] How Terraform compares to other infrastructure as code tools”
 
 - What is Devops?
@@ -84,4 +84,9 @@ Why Terraform?
         Large community provide us kpi's for how many people are contributing to the development of the tool, how many people use the tool and the improves it need and how fast issues are sorted, this indicators gave us a good perspective if the tool will have a long life or die soon.
 
     - Mature versus cutting-edge
+        Terraform show itself very stable
+
     - Using multiple tools together
+      Terraform interact with most variate of tools as Ansible to config servers or Packer and Docker to provide images.
+
+    
