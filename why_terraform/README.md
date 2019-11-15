@@ -34,3 +34,13 @@ Why Terraform?
 
     - Provisioning tools
       Terraform, CloudFormation, and OpenStack are responsible for creating servers,load balancers,queues,monitoring, subnet configurations, firewall settings, routing rules, SSL certificates, and almost all infrastructure components. example [terraform]((https://github.com/orlando-pereira/terraform-up-and-running/tree/master/why_terraform/code/terraform))
+
+- The benefits of infrastructure as code
+  - When your infrastructure are defined as code you are able to use a variety of software engineering practices to dramatically improve your software delivery process, including the following:
+    - Self-service
+    - Speed and safety
+    - Documentation
+    - VersionControl
+    - Validation
+    - Reuse
+    - Happiness
