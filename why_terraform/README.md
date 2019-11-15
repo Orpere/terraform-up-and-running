@@ -29,4 +29,7 @@ Why Terraform?
         example: [packer template](https://github.com/orlando-pereira/terraform-up-and-running/tree/master/why_terraform/code/packer)
 
     - Orchestration tools
+
+      Kubernetes, Marathon/Mesos, Amazon ECS,Docker Swarm, and Nomad those orchestration tools are design to Deploy Vms and Containers and making efficient use of your hardware, Roll out updates,monitor heath(auto healing), scale the number of nodes and containers(auto scaling), Distribute traffic across Vms and containers(load balancing), and allow Vms and containers find and talk over the network(service discovery).
+
     - Provisioning tools
