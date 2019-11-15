@@ -64,15 +64,19 @@ Why Terraform?
 
   - Here are the main principles of Terraform:
 
-    - Configuration management versus provisioning
+    - Configuration management versus provisioning -
         If you already use some templating tools or such as Docker or Packer the most of your configuration management is already done, so will be much more easy to use a Provision tool as Terraform to deploy those images and control them life cycle
 
-    - Mutable infrastructure versus immutable infrastructure
+    - Mutable infrastructure versus immutable infrastructure -
         If you use a configuration tool to install por example OpenSsl it will update the actual version of the OpenSsl what can bring issues difficult to diagnose but in other hand if you use a Docker or Packer images you can rollback to the previous image and improve the new one on the first steps of the workflow instead of stop production.
   
-    - Procedural language versus declarative language
-  
+    - Procedural language versus declarative language -
+        Procedural don't show in total the real state of infrastructure.
+        Procedural code limits reusability.
+
     - Master versus Masterless
+        Master needs extra infrastructure, high maintenance, more points where you can have security issues as is more infrastructure to maintain.
+
     - Agent versus agentless
     - Large community versus small community
     - Mature versus cutting-edge
