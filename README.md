@@ -1,4 +1,4 @@
-# Terraform Up &amp; Running 
+# Terraform Up &amp; Running
 
 This repo has intention of help on the reading and interpretation of the book [**Terraform: Up &amp; Running**](https://www.terraformupandrunning.com/)
 
@@ -14,7 +14,7 @@ As main goal you should be able to answer to:
 - How do you make Terraform a part of your automated deployment process?
 - What are the best practices for using Terraform as a team?
 
-Excerpt From: Yevgeniy (Jim) Brikman. “Terraform: Up & Running”. Apple Books. 
+Excerpt From: Yevgeniy (Jim) Brikman. “Terraform: Up & Running”
 
 Author: Yevgeniy Brikman
 
@@ -38,7 +38,7 @@ terraform init
 Terraform apply
 ```
 
-Excerpt From: Yevgeniy (Jim) Brikman. “Terraform: Up & Running”. Apple Books.
+Excerpt From: Yevgeniy (Jim) Brikman. “Terraform: Up & Running”
 
 **NOTE:** This is not an exhaustive reference manual for that please check the Terraform [documentation](https://www.terraform.io/docs/index.html)
 
