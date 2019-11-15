@@ -2,7 +2,7 @@
 
 Why Terraform?
 
-- [x] What is Devops?
+- [x] [What is Devops?
 - [X] What is infrastructure as code?
 - [ ] The benefits of infrastructure as code
 - [ ] How Terraform works
