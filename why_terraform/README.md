@@ -6,7 +6,7 @@ Why Terraform?
 - [X] What is infrastructure as code?
 - [x] The benefits of infrastructure as code
 - [x] How Terraform works
-- [ ] How Terraform compares to other infrastructure as code tools”
+- [ ] How Terraform compares to other infrastructure as code tools
 
 - What is Devops?
   - Devops is not a team or a job is the set of ideas and techniques which objective is short the distance between "Devs" and "Ops" teams with the main goal to a faster and reliable software delivery, avoiding human errors.
@@ -74,19 +74,20 @@ Why Terraform?
         Procedural don't show in total the real state of infrastructure.
         Procedural code limits reusability.
 
-    - Master versus Masterless
+    - Master versus Masterless -
         Master needs extra infrastructure, high maintenance, more points where you can have security issues as is more infrastructure to maintain.
 
-    - Agent versus agentless
+    - Agent versus agentless -
         services with agents need Bootstrapping, more maintenance and need more one service running it will be more open to attackers.
 
-    - Large community versus small community
+    - Large community versus small community -
         Large community provide us kpi's for how many people are contributing to the development of the tool, how many people use the tool and the improves it need and how fast issues are sorted, this indicators gave us a good perspective if the tool will have a long life or die soon.
 
-    - Mature versus cutting-edge
+    - Mature versus cutting-edge -
         Terraform show itself very stable
 
-    - Using multiple tools together
+    - Using multiple tools together -
       Terraform interact with most variate of tools as Ansible to config servers or Packer and Docker to provide images.
 
-    
+    - How Terraform compares to other infrastructure as code tools -
+      Is the most reliable of all the provision tools
