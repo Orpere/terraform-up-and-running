@@ -6,7 +6,7 @@ Why Terraform?
 - [X] What is infrastructure as code?
 - [x] The benefits of infrastructure as code
 - [x] How Terraform works
-- [ ] How Terraform compares to other infrastructure as code tools
+- [x] How Terraform compares to other infrastructure as code tools
 
 - What is Devops?
   - Devops is not a team or a job is the set of ideas and techniques which objective is short the distance between "Devs" and "Ops" teams with the main goal to a faster and reliable software delivery, avoiding human errors.
