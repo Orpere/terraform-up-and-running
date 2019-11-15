@@ -61,7 +61,9 @@ Why Terraform?
 
 - How Terraform works
   - Terraform is a single binary who works directly on your computer and taking advantage of a single language and toolset (terraform is agnostic) talk directly with the provides APIs to deploy your IAC defined in the terraform files.
+
   - Here are the main principles of Terraform:
+
     - Configuration management versus provisioning
     - Mutable infrastructure versus immutable infrastructure
     - Procedural language versus declarative language
