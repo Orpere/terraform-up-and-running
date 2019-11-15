@@ -17,7 +17,7 @@ Why Terraform?
 - What is infrastructure as code?
   - The idea of IAC is write and execute code to define, deploy ,update and destroy your infrastructure.
   - There are five broad categories of IAC tools:
-    - Ad hoc scripts, example setup-webserver.sh
+    - Ad hoc scripts, example [setup-webserver.sh](https://github.com/orlando-pereira/terraform-up-and-running/blob/master/why_terraform/code/setup-webserver.sh)
     - Configuration management tools
     - Server templating tools
     - Orchestration tools
