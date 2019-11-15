@@ -40,6 +40,10 @@ Terraform apply
 
 Excerpt From: Yevgeniy (Jim) Brikman. “Terraform: Up & Running”. Apple Books.
 
+**NOTE:** This is not an exhaustive reference manual for that please check the Terraform [documentation](https://www.terraform.io/docs/index.html)
+
+## code and explanations`:`
+
 - [ ] [Why Terraform](https://github.com/orlando-pereira/terraform-up-and-running/tree/master/why_terraform)
 - [ ] Getting Started with Terraform
 - [ ] How to manage Terraform State
