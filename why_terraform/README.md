@@ -26,6 +26,7 @@ Why Terraform?
     - Server templating tools
 
         Docker, Packer and Vagrant and those tools are design to create images or "snapshots" of the OS,the files and other details for you can install that images across your servers or containers.
+        example: [packer template](https://github.com/orlando-pereira/terraform-up-and-running/tree/master/why_terraform/code/packer)
 
     - Orchestration tools
     - Provisioning tools
