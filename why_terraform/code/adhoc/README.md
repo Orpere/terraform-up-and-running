@@ -21,7 +21,7 @@
    vagrant up
 ```
 
-now you can type on your browser `http://<your ubuntu host ip>:8080/app`
+now you can type on your browser `http://11.11.11.11/app`
 
 you can see **hello world**
 
