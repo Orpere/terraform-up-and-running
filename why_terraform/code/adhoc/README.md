@@ -7,7 +7,12 @@
 - You should be into the adhoc directory
 
 ```bash
-   cd  cd why_terraform/code/adhoc
+   git clone git@github.com:orlando-pereira/terraform-up-and-running.git #if is not cloned
+
+   cd terraform-up-and-running
+
+   cd why_terraform/code/adhoc
+
 ```
 
 - Run vagrant up:
