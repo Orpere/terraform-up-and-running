@@ -44,7 +44,7 @@ Excerpt From: Yevgeniy (Jim) Brikman. “Terraform: Up & Running”
 
 ## code and explanations`:`
 
-- [ ] [Why Terraform](https://github.com/orlando-pereira/terraform-up-and-running/tree/master/why_terraform)
+- [x] [Why Terraform](https://github.com/orlando-pereira/terraform-up-and-running/tree/master/why_terraform)
 - [ ] Getting Started with Terraform
 - [ ] How to manage Terraform State
 - [ ] How to Create Reusable infrastructure with Terraform Modules
