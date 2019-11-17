@@ -10,8 +10,9 @@
   "provisioners": [{
     "type": "shell",
     "inline": [
+      "sleep 30",
       "sudo apt-get update",
-      "sudo apt-get install -y php apache2",
+      "sudo apt-get install -y git php apache2",
       "sudo git clone https://github.com/brikis98/php-app.git /var/www/html/app"
     ],
     "environment_vars": [

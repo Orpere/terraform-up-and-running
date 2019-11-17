@@ -1,0 +1,24 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+BOX_IMAGE = "ubuntu/bionic64"
+NODE_COUNT = 5
+PUBKEY = "/Users/orlando/.ssh/id_rsa.pub"
+
+Vagrant.configure("2") do |config|   
+  (1..NODE_COUNT).each do |i|
+    config.vm.define "node#{i}" do |config|
+    config.vm.network "forwarded_port", guest: 80, host: "808#{i}"
+    config.vm.network "private_network", ip: "11.11.11.1#{i}"
+    config.vm.box = BOX_IMAGE
+    public_key = File.read("#{PUBKEY}")
+    config.vm.provision "shell", inline: <<-SCRIPT
+        mkdir -p /home/vagrant/.ssh
+        chmod 700 /home/vagrant/.ssh
+        echo 'Copying ansible-vm public SSH Key to the VM'
+        echo "#{public_key}" >> /home/vagrant/.ssh/authorized_keys
+        chmod -R 600 /home/vagrant/.ssh/authorized_keys
+        SCRIPT
+    end
+  end
+end
