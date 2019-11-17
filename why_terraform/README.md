@@ -33,7 +33,7 @@ Why Terraform?
       Kubernetes, Marathon/Mesos, Amazon ECS,Docker Swarm, and Nomad those orchestration tools are design to Deploy Vms and Containers and making efficient use of your hardware, Roll out updates,monitor heath(auto healing), scale the number of nodes and containers(auto scaling), Distribute traffic across Vms and containers(load balancing), and allow Vms and containers find and talk over the network(service discovery). example: [Kubernetes](https://github.com/orlando-pereira/terraform-up-and-running/tree/master/why_terraform/code/kubernetes)
 
     - Provisioning tools
-      Terraform, CloudFormation, and OpenStack are responsible for creating servers,load balancers,queues,monitoring, subnet configurations, firewall settings, routing rules, SSL certificates, and almost all infrastructure components. example [terraform]((https://github.com/orlando-pereira/terraform-up-and-running/tree/master/why_terraform/code/terraform))
+      Terraform, CloudFormation, and OpenStack are responsible for creating servers,load balancers,queues,monitoring, subnet configurations, firewall settings, routing rules, SSL certificates, and almost all infrastructure components. example [terraform](https://github.com/orlando-pereira/terraform-up-and-running/tree/master/why_terraform/code/terraform))
 
 - The benefits of infrastructure as code
   - When your infrastructure are defined as code you are able to use a variety of software engineering practices to dramatically improve your software delivery process, including the following:
