@@ -232,3 +232,81 @@ For get the example more configurable we can replace the port values with variab
     ~
     server_port = "8080"
     ```
+
+Creating outputs
+
+```terraform
+output "public_ip" {
+  value       = aws_instance.example.public_ip
+  description = "The public IP address of the web server"
+}
+```
+
+Deploying a cluster of web servers
+
+- lifecycle if you add **create_before_destroy = true** terraform will create the server first and destroy the old after and reverse.
+
+    ```terraform
+    lifecycle {
+        create_before_destroy = true
+    }
+    ```
+
+- The other important point of a cluster are the subnets the same way we declare a resource we declare a vpc but instead resource we will use a data source as:
+
+    ```bash
+    data "<PROVIDER>_<TYPE>" "<NAME>" {
+    [CONFIG ...]
+    }
+    ```
+
+    ```terraform
+    data "aws_vpc" "default" {
+        default = true
+    }
+    ```
+- To get the data out of a data source, you use the following attribute reference syntax:
+
+    ```bash
+    data.<PROVIDER>_<TYPE>.<NAME>.<ATTRIBUTE>”
+    ```
+
+    for example
+
+    ```terraform
+    data "aws_subnet_ids" "default" {
+        vpc_id = data.aws_vpc.default.id
+    }
+    ```
+
+- Now we can add the default subnet id to the load balancer
+
+    ```terraform
+    data "aws_vpc" "default" {
+    default = true
+    }
+
+    data "aws_subnet_ids" "default" {
+    vpc_id = data.aws_vpc.default.id
+    }
+
+    resource "aws_lb" "example" {
+
+    name = var.alb_name
+
+    load_balancer_type = "application"
+    subnets            = data.aws_subnet_ids.default.ids
+    security_groups    = [aws_security_group.alb.id]
+    }
+    ```
+
+- Now define Lb if is alb or elb on the example is alb
+
+    ``` terraform
+    resource "aws_lb" "example" {
+    name               = "terraform-asg-example"
+    load_balancer_type = "application"
+    subnets            = data.aws_subnet_ids.default.ids
+    }
+    ```
+- define policy's and security groups as on the [example]
