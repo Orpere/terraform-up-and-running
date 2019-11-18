@@ -7,6 +7,10 @@ resource "aws_instance" "app" {
   availability_zone = "us-east-2a"
   ami               = "ami-0b3192b6308bb1b49"
   vpc_security_group_ids = ["${aws_security_group.http-group.id}"]
+  
+  tags = {
+    Name = "terraform-example"
+  }
 
   user_data = <<-EOF
               #!/bin/bash
