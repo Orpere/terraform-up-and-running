@@ -4,7 +4,7 @@ Getting Started with Terraform
 
 - [x] Setting up your [AWS account](https://portal.aws.amazon.com/billing/signup?nc2=h_ct&src=header_signup&redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation#/start)
 - [x] Installing [terraform](https://learn.hashicorp.com/terraform/getting-started/install.html)
-- [x] Deploying a single [server]((https://github.com/orlando-pereira/terraform-up-and-running/tree/master/why_terraform/code/terraform))
+- [x] Deploying a single [server](https://github.com/orlando-pereira/terraform-up-and-running/tree/master/why_terraform/code/terraform)
 - [x] Deploying a single web [server](https://github.com/orlando-pereira/terraform-up-and-running/tree/master/why_terraform/code/terraform)
 - [ ] Deploying a configurable web server
 - [ ] Deploying a cluster of web servers
