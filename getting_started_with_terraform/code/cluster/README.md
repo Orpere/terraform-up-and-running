@@ -20,8 +20,8 @@ terraform show
 curl http://<alb_dns_name>
 ```
 
-  - check in your browser http://ec2-52-14-207-72.us-east-2.compute.amazonaws.com/app
-  - you should be able to see a **"Hello World"**
+  - check in your browser  `http://<alb_dns_name>`
+    - you should be able to see a **"Hello World"**
   
 - [x] Destroy infrastructure
 
