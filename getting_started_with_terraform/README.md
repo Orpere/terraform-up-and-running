@@ -8,9 +8,9 @@ Getting Started with Terraform
 - [x] Version control
 - [x] Deploying a single web [server](https://github.com/orlando-pereira/terraform-up-and-running/tree/master/why_terraform/code/terraform)
 - [x] Deploying a configurable web server
-- [ ] Deploying a cluster of web servers
-- [ ] Deploying a load balancer
-- [ ] Cleaning up
+- [x] Deploying a cluster of web servers
+- [x] Deploying a load balancer
+- [x] Cleaning up
 
 For this chapter you will need to attach the **AmazonEC2FullAccess** policy to your IAM user.
 
