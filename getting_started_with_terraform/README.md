@@ -55,5 +55,5 @@ terraform apply #this will show the same as plan output and will give you possib
 ```
 
 ```Terraform
-terraform apply #this will show the same as plan output and will give you possibility to proceed with changes
+terraform destroy # wipe all your infrastructure
 ```
