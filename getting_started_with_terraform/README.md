@@ -309,4 +309,4 @@ Deploying a cluster of web servers
     subnets            = data.aws_subnet_ids.default.ids
     }
     ```
-- define policy's and security groups as on the [example]
+- define policy's and security groups as on the [example](https://github.com/orlando-pereira/terraform-up-and-running/blob/master/getting_started_with_terraform/code/cluster/main.tf)
