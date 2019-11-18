@@ -13,6 +13,7 @@ resource "aws_launch_configuration" "example-orlando" {
               echo "Hello, World" > index.html
               nohup busybox httpd -f -p ${var.server_port} &
               EOF
+
   lifecycle {
     create_before_destroy = true
   }
@@ -21,8 +22,11 @@ resource "aws_launch_configuration" "example-orlando" {
 resource "aws_autoscaling_group" "example-orlando" {
   launch_configuration = aws_launch_configuration.example-orlando.name
   availability_zones   = ["us-east-2a", "us-east-2b", "us-east-2b"]
-  min_size             = 2
-  max_size             = 10
+  health_check_type = "ELB"
+  target_group_arns = [aws_lb_target_group.asg.arn]
+
+  min_size = 2
+  max_size = 10
 
   tag {
     key                 = "Name"
