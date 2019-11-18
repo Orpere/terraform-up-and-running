@@ -3,7 +3,7 @@ provider "aws" {
 }
 # exercice
 
-resource "aws_launch_configuration" "example" {
+resource "aws_launch_configuration" "example-orlando" {
   image_id        = "ami-0c55b159cbfafe1f0"
   instance_type   = "t2.micro"
   security_groups = [aws_security_group.instance.id]
@@ -18,15 +18,15 @@ resource "aws_launch_configuration" "example" {
   }
 }
 
-resource "aws_autoscaling_group" "example" {
-  launch_configuration = aws_launch_configuration.example.name
-
-  min_size = 2
-  max_size = 10
+resource "aws_autoscaling_group" "example-orlando" {
+  launch_configuration = aws_launch_configuration.example-orlando.name
+  availability_zones   = ["us-east-2a", "us-east-2b", "us-east-2b"]
+  min_size             = 2
+  max_size             = 10
 
   tag {
     key                 = "Name"
-    value               = "terraform-asg-example"
+    value               = "terraform-asg-example-orlando"
     propagate_at_launch = true
   }
 }
@@ -50,7 +50,7 @@ data "aws_subnet_ids" "default" {
   vpc_id = data.aws_vpc.default.id
 }
 
-resource "aws_lb" "example" {
+resource "aws_lb" "example-orlando" {
 
   name = var.alb_name
 
@@ -60,7 +60,7 @@ resource "aws_lb" "example" {
 }
 
 resource "aws_lb_listener" "http" {
-  load_balancer_arn = aws_lb.example.arn
+  load_balancer_arn = aws_lb.example-orlando.arn
   port              = 80
   protocol          = "HTTP"
 
