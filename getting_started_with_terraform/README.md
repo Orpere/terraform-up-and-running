@@ -5,8 +5,9 @@ Getting Started with Terraform
 - [x] Setting up your [AWS account](https://portal.aws.amazon.com/billing/signup?nc2=h_ct&src=header_signup&redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation#/start)
 - [x] Installing [terraform](https://learn.hashicorp.com/terraform/getting-started/install.html)
 - [x] Deploying a single [server](https://github.com/orlando-pereira/terraform-up-and-running/tree/master/why_terraform/code/terraform)
+- [x] Version control
 - [x] Deploying a single web [server](https://github.com/orlando-pereira/terraform-up-and-running/tree/master/why_terraform/code/terraform)
-- [ ] Deploying a configurable web server
+- [x] Deploying a configurable web server
 - [ ] Deploying a cluster of web servers
 - [ ] Deploying a load balancer
 - [ ] Cleaning up
@@ -22,7 +23,7 @@ export AWS_ACCESS_KEY_ID=(your access key id)
 export AWS_SECRET_ACCESS_KEY=(your secret access key)
 ```
 
-. Terraform code is written in the HashiCorp Configuration Language (HCL) and the files extension is `.tf`
+. Terraform code is written in the HashiCorp Configuration Language (HCL) and the files extension are `.tf`
 
 . In main.tf should be defined the provider as the follow:
 
@@ -105,3 +106,129 @@ Example From: Yevgeniy (Jim) Brikman. “Terraform: Up & Running”.
 ```terraform
 terraform destroy # wipe all your infrastructure
 ```
+
+- Version control
+
+Now you are working with terraform code, you should storage your code and make it versional.
+for example you can use GitHub to store your files
+
+```github
+git init
+git add main.tf
+git commit -m "first commit"
+```
+
+you should also not upload private files and credentials and for that you must create a **.gitignore** file
+
+```github
+.terraform
+*.tfstate
+*.tfstate.backup
+```
+
+terraform graph
+
+http://bit.ly/2rNaeeC
+
+- Deploying a configurable web server
+  
+. For make the things more configurable we can use variables instead to repeat our selfs
+
+variable "NAME" {
+  [CONFIG ...]
+}
+
+Number
+
+```terraform
+variable "number_example" {
+  description = "An example of a number variable in Terraform"
+  type        = number
+  default     = 42
+}
+```
+
+List
+
+```terraform
+variable "list_example" {
+  description = "An example of a list in Terraform"
+  type        = list
+  default     = ["a", "b", "c"]
+}
+
+variable "list_numeric_example" {
+  description = "An example of a numeric list in Terraform"
+  type        = list(number)
+  default     = [1, 2, 3]
+}
+```
+
+Map
+
+```terraform
+variable "map_example" {
+  description = "An example of a map in Terraform"
+  type        = map(string)
+
+  default = {
+    key1 = "value1"
+    key2 = "value2"
+    key3 = "value3"
+  }
+}
+```
+
+can also create some more complicated structural types
+
+```terraform
+variable "object_example" {
+  description = "An example of a structural type in Terraform"
+  type        = object({
+    name    = string
+    age     = number
+    tags    = list(string)
+    enabled = bool
+  })
+
+  default = {
+    name    = "value1"
+    age     = 42
+    tags    = ["a", "b", "c"]
+    enabled = true
+  }
+}
+```
+
+For get the example more configurable we can replace the port values with variables
+
+- If the default value of the variable is empty Terraform will prompt for the value
+
+    ```terraform
+    terraform apply
+
+    var.server_port
+    The port the server will use for HTTP requests
+
+    Enter a value:
+    ```
+
+- You can also specify the value as:
+
+  ```terraform
+  terraform plan -var "server_port=8080
+  ```
+
+- Export as env var will also work
+
+    ```terraform
+    export TF_VAR_server_port=8080
+    ```
+
+- Or write the values on a external file.tfvar
+
+    ```terraform
+    vim variables.tfvar
+    ~
+    server_port = "8080"
+    ```
