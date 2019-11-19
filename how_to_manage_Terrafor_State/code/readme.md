@@ -6,18 +6,18 @@
   add to your code
 
   ```terraform
-  terraform {
-    backend "s3" {
-     # Replace this with your bucket name!
-      bucket         = "<bucket name>"
-      key            = "global/s3/terraform.tfstate"
-      region         = "us-east-2"
+    terraform {
+        backend "s3" {
 
-      # Replace this with your DynamoDB table name!
-      dynamodb_table = "<Dinodb table>"
-      encrypt        = true
+          bucket         = "orlando-workspace"
+          key            = "orlando-workspace/terraform.tfstate"
+          region         = "us-east-2"
+          dynamodb_table = "orlando-locks"
+          encrypt        = true
+
+        }
     }
-  }
+
   ```
 
 ``` Terraform
