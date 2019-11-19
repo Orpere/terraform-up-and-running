@@ -42,6 +42,7 @@
   This process have two major inconvenient:
   - can't deploy your infrastructure in one command
   - make difficult to use resources dependencies
+  - code duplication
 
 - Remote state data source
   
