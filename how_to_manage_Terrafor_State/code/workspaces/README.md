@@ -24,7 +24,9 @@ Plan: 1 to add, 0 to change, 0 to destroy.
 - run terraform apply and check your s3 bucket
   
 ```bash
+
 the path has changed to env:/example1/orlando-workspace/terraform.tfstate
+
 ```
 
 - run terraform workspace list
@@ -45,3 +47,7 @@ terraform workspace list
 * default
 example1
 ```
+
+- run terraform destroy in both workspaces
+
+- isolation via file layout

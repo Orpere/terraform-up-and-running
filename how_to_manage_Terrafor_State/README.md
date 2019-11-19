@@ -34,7 +34,9 @@
     }
     ```
 
-- Isolation via workspaces
+- Isolation via workspaces -
+  the workspaces permit us to create different state files per env on the same backend
   
-- Isolation via file layout
+- Isolation via file layout -
+  split environments in different folders and backend using different mechanisms of authentication
   

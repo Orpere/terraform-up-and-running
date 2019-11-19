@@ -34,5 +34,3 @@ Do you want to copy existing state to the new backend?
 - Go to the Terraform code, remove the backend configuration, and re run terraform init to copy the Terraform state back to your local disk.
 
 - Run terraform destroy to delete the S3 bucket and DynamoDB table
-
-Excerpt From: Yevgeniy (Jim) Brikman. “Terraform: Up & Running”.
