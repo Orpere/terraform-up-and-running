@@ -33,3 +33,8 @@
         }
     }
     ```
+
+- Isolation via workspaces
+  
+- Isolation via file layout
+  

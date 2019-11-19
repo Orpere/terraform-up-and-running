@@ -2,14 +2,13 @@ provider "aws" {
   region = "us-east-2"
 }
 
-#create a S3 bucket 
 resource "aws_s3_bucket" "terraform_state" {
-  bucket = "terraform-example-orlando-state"
 
-  # Prevent accidental deletion of this S3 bucket
-  lifecycle {
-    prevent_destroy = true
-  }
+  bucket = var.bucket_name
+
+  // This is only here so we can destroy the bucket as part of automated tests. You should not copy this for production
+  // usage
+  force_destroy = true
 
   # Enable versioning so we can see the full revision history of our
   # state files
@@ -28,7 +27,7 @@ resource "aws_s3_bucket" "terraform_state" {
 }
 
 resource "aws_dynamodb_table" "terraform_locks" {
-  name         = "terraform-example-orlando-locks"
+  name         = var.table_name
   billing_mode = "PAY_PER_REQUEST"
   hash_key     = "LockID"
 
@@ -37,14 +36,3 @@ resource "aws_dynamodb_table" "terraform_locks" {
     type = "S"
   }
 }
-
-output "s3_bucket_arn" {
-  value       = aws_s3_bucket.terraform_state.arn
-  description = "The ARN of the S3 bucket"
-}
-
-output "dynamodb_table_name" {
-  value       = aws_dynamodb_table.terraform_locks.name
-  description = "The name of the DynamoDB table"
-}
-
