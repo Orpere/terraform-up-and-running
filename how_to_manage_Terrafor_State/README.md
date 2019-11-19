@@ -39,4 +39,20 @@
   
 - Isolation via file layout -
   split environments in different folders and backend using different mechanisms of authentication
+  This process have two major inconvenient:
+  - can't deploy your infrastructure in one command
+  - make difficult to use resources dependencies
+
+- Remote state data source
   
+  ```terraform
+    data "terraform_remote_state" "db" {
+        backend = "s3"
+
+        config = {
+            bucket = "orlando-workspace"
+            key    = "stage/data-stores/webserver-cluster/terraform.tfstate"
+            region = "us-east-2"
+        }
+    }
+  ```
