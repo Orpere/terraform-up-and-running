@@ -17,7 +17,7 @@ data "terraform_remote_state" "db" {
 
   config = {
     bucket = "orlando-workspace"
-    key    = "stage/data-stores/webserver-cluster/terraform.tfstate"
+    key    = "stage/data-stores/mysql/terraform.tfstate"
     region = "us-east-2"
   }
 }

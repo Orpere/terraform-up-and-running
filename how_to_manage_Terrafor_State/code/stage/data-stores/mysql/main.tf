@@ -6,7 +6,7 @@ terraform {
   backend "s3" {
 
     bucket         = "orlando-workspace"
-    key            = "stage/data-stores/webserver-cluster/terraform.tfstate"
+    key            = "stage/data-stores/mysql/terraform.tfstate"
     region         = "us-east-2"
     dynamodb_table = "orlando-locks"
     encrypt        = true
