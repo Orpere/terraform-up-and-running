@@ -15,7 +15,7 @@ module "webserver_cluster" {
   # repo, we'd instead use an SSH URL (git@github.com:brikis98/terraform-up-and-running-code.git) to leverage SSH auth
   # source = "github.com/brikis98/terraform-up-and-running-code//code/terraform/04-terraform-module/module-example/modules/services/webserver-cluster?ref=v0.1.0"
   source = "git@github.com:orlando-pereira/tf-modules.git//webserver-cluster?ref=v0.0.2"
- 
+
   cluster_name           = var.cluster_name
   db_remote_state_bucket = var.db_remote_state_bucket
   db_remote_state_key    = var.db_remote_state_key
@@ -23,6 +23,11 @@ module "webserver_cluster" {
   instance_type = "m4.large"
   min_size      = 2
   max_size      = 10
+  
+  # custom_tags = {
+  #   Owner      = "orlando"
+  #   DeployedBy = "terraform"
+  # }
 }
 
 resource "aws_autoscaling_schedule" "scale_out_during_business_hours" {
